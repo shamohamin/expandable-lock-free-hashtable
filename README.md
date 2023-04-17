@@ -12,7 +12,7 @@ Benchmark was provided by [Prof. Trever Brown ](http://tbrown.pro).
 
 ## Start
 ```bash
-  make all -j && LD_PRELOAD=./libjemalloc.so (perf stat/record -e YOUR_DESIRED_EVENTS such as LLC-stores,LLC-store-misses,LLC-loads,LLC-load-misses) (taskset/numactl -c YOUR_CPU_CORES) ./benchmark or ./benchmark_debug (enables debuging defines)
+  make USER_DEFINES="-DMUTEX" all -j && LD_PRELOAD=./libjemalloc.so (perf stat/record -e YOUR_DESIRED_EVENTS such as LLC-stores,LLC-store-misses,LLC-loads,LLC-load-misses) (taskset/numactl -c YOUR_CPU_CORES) ./benchmark or ./benchmark_debug (enables debuging defines)
    -a  [string]   [a]lgorithm name in { A, AA, B, C, D }
    -sT [int]      size of initial hash [T]able
    -m  [int]      [m]illiseconds to run ;
