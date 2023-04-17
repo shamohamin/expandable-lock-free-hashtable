@@ -1,5 +1,5 @@
-# expandable-hash-table
-This repository implements different implementation of a concurrent probing hashtable.
+# expandable-lock-free-hashtable
+implementation of a concurrent probing hashtable.
 Each of this methods that have been implemented in this repository are linearizable. 
 
 - file alg_a.h: [A algorithm] Implements a concurrent hashtable that each slot has its lock (fine-grain locking approach). 
