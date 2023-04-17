@@ -1,6 +1,6 @@
 # expandable-lock-free-hashtable
 implementation of a concurrent probing hashtable.
-Each of this methods that have been implemented in this repository are linearizable. 
+Each of this methods that have been implement ed in this repository are linearizable. 
 
 - file alg_a.h: [A algorithm] Implements a concurrent hashtable that each slot has its lock (fine-grain locking approach). 
 - file alg_b.h: [B algorithm] Implements fine-grain locking after finding a slot.
@@ -31,3 +31,8 @@ Performace of hashtable with respect to the different locks
 
 Comparing performance of A,B algorithms to show that position of acquiring a lock is important.
 ![c](./results/A-B-cache-misses.png)
+
+## Todo List
+
+- Implementing a memory reclamation method (such as EBR (debra, debra+),  haphazard pointer) for D algorithm. 
+- Implementing AMD Hardware transaction memory instead of lock-free algorithms. 
